@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raspberry Piを使った物体検出とLINE通知</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class = "main">
+    <h1 class = "html-title">Raspberry Piを使った物体検出とLINE通知</h1>
+    <p class = "short-explain">Raspberry Piに接続されたカメラを使って人工知能を動かし、検出した物体をネットを介してLINEに通知する</p>
+  </div>
+    <div class = "point">電子工作の概要</div>
+    <div class = "explain">Raspberry Piに接続したカメラから物体を検出し、インターネットを通してLINEに通知する電子工作をし、深層学習型人工知能の概要や仕組み、学習済み人工知能モデルや画像処理ライブラリであるOpenCVの実装、HTTPやWebAPIを使って物体の検出結果をインターネットサービスと連携させるAIとIoTを組み合わせた電子工作をしました。</div>
+    <h2 class = "btn slide-bg"><span></span>MobilenetSSDとOpenCVについて</h2>
+    <p class = 'mobile'>MobilenetSSDは物体検出用に作られた機械学習モデルで、Raspberry Piのカメラから検出された画像から複数の物体を検出してその種別を推論することができます。今回はTensorFlowで作られたファイルを使用しました。<br>またOpenCVを使って学習済み人工知能を動かしています。OpenCVとは画像等を処理するための様々な機能をもっているオープンソースのライブラリです。<br>今回の電子工作ではTensorFlowで作成されたファイルとOpenCVを使って人工知能を動かすのに使用するファイルの2種類を取り込んだ後、Raspberry Piのカメラから検出された画像の前処理を行った上で対象の種別と位置を識別し青い枠で囲むようにします。</p>
+    <h2 class = "btn slide-bg"><span></span>Raspberry Piでの物体検出</h2>
+    <h4 >1.まずRaspberry Piにカメラを接続します</h4>
+    <img class = "camera" src="raspberry.pi with camera (2).jpg" alt="Raspberryにカメラを接続します">
+    <h4 >2.その後、物体検出用に作成されたプログラムを用いて、物体検出を行います。</h4>
+    <img  class = "cup" src="cup.png" alt="物体検出写真">
+    <h4>3.最後に検出結果をLineに投稿します</h4>
+    <h2 class = "btn slide-bg"><span></span>Line Notifyについて</h2>
+    <p class = "mobile">IoTの仕組みを使って、物体の検出結果をインターネットを介してLineに通知します。インターネット上の通信にはIoTでも広く使用されている通信規約の1つであるHTTP、そしてWebAPIを使います。<br>通信規約とはコンピューター間でメッセージを送受信する時の決まり事です。APIとはアプリケーション・プログラミング・インターフェースの頭文字でプログラムを作る時につかうある機能につなぐための接点というような意味があります。そしてWebAPIにはそのWebAPIの接点を使うための規約があります（通信規約にはHTTPを使うこと等）。<br>Line NotifyはLineが提供しているサービスで、HTTPを使ってWebAPIサーバーに情報を送信することができます。</p>
+   
+
+    
+</body>
+</html>
